@@ -1,107 +1,86 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
 }
 
 h1 {
-  text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .container {
-  max-width: 500px;
-  margin: 0 auto;
+    max-width: 500px;
 }
 
 .form-group {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 .btn {
-  display: block;
-  margin: 0 auto;
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  cursor: pointer;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
-/* Password output styling */
 #passwordOutput {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 18px;
-  text-align: center;
-  transition: color 0.5s;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #000;
+    color: #ff00ff;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(255, 0, 255, 0.8);
 }
 
-/* Animation for changing password color character by character */
-@keyframes rainbowAnimation {
-  0% {
-    color: red;
-  }
-  14% {
-    color: orange;
-  }
-  28% {
-    color: yellow;
-  }
-  42% {
-    color: green;
-  }
-  57% {
-    color: blue;
-  }
-  71% {
-    color: indigo;
-  }
-  85% {
-    color: violet;
-  }
-  100% {
-    color: red;
-  }
+#copyBtn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff00ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
-#passwordOutput.animated {
-  animation: rainbowAnimation 5s infinite;
-}
-
-/* Table-like structure for the container */
-.container {
-  display: table;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-.form-group,
-#passwordOutput {
-  display: table-row;
-}
-
-label,
-input,
-button {
-  display: table-cell;
-  vertical-align: middle;
-  padding: 10px;
-}
-
-.label-column {
-  width: 30%;
-  font-weight: bold;
-  text-align: right;
-}
-
-.input-column {
-  width: 40%;
-}
-
-.button-column {
-  width: 30%;
-  text-align: center;
+#copyBtn:hover {
+    background-color: #fff;
+    color: #ff00ff;
 }
 
