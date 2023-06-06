@@ -1,5 +1,3 @@
-/* CSS code for the password generator website */
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -29,24 +27,81 @@ h1 {
   cursor: pointer;
 }
 
-/* CSS code for the rainbow-colored password */
-
+/* Password output styling */
 #passwordOutput {
-  font-size: 24px;
-  padding: 5px;
   width: 100%;
-  margin-bottom: 10px;
-  border: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px;
+  text-align: center;
+  transition: color 0.5s;
 }
 
-.rainbow-text {
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rainbow 5s linear infinite;
+/* Animation for changing password color character by character */
+@keyframes rainbowAnimation {
+  0% {
+    color: red;
+  }
+  14% {
+    color: orange;
+  }
+  28% {
+    color: yellow;
+  }
+  42% {
+    color: green;
+  }
+  57% {
+    color: blue;
+  }
+  71% {
+    color: indigo;
+  }
+  85% {
+    color: violet;
+  }
+  100% {
+    color: red;
+  }
 }
 
-@keyframes rainbow {
-  0% { background-position: 0% 50%; }
-  100% { background-position: 100% 50%; }
+#passwordOutput.animated {
+  animation: rainbowAnimation 5s infinite;
 }
+
+/* Table-like structure for the container */
+.container {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.form-group,
+#passwordOutput {
+  display: table-row;
+}
+
+label,
+input,
+button {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.label-column {
+  width: 30%;
+  font-weight: bold;
+  text-align: right;
+}
+
+.input-column {
+  width: 40%;
+}
+
+.button-column {
+  width: 30%;
+  text-align: center;
+}
+
