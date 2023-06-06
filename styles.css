@@ -1,61 +1,24 @@
-/* Reset default browser styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-/* Body styles */
+/* CSS code for the password generator website */
+
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
   padding: 20px;
-  background-color: #f2f2f2;
-  color: #333;
-}
-
-/* Container styles */
-.container {
-  max-width: 500px;
-  margin: 0 auto;
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* Heading styles */
-h1, h2, h3 {
-  text-align: center;
-  margin-bottom: 20px;
 }
 
 h1 {
-  font-size: 28px;
+  text-align: center;
 }
 
-.sub-heading {
-  font-size: 24px;
-  margin-top: 40px;
+.container {
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-/* Form styles */
 .form-group {
   margin-bottom: 20px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="number"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-}
-
-/* Button styles */
 .btn {
   display: block;
   margin: 0 auto;
@@ -63,35 +26,27 @@ input[type="number"] {
   background-color: #4CAF50;
   color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.btn:hover {
-  background-color: #45a049;
-}
+/* CSS code for the rainbow-colored password */
 
-.btn:disabled {
-  background-color: #ccc;
-  cursor: not-allowed;
-}
-
-/* Output styles */
 #passwordOutput {
+  font-size: 24px;
+  padding: 5px;
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
   margin-bottom: 10px;
+  border: none;
 }
 
-/* Footer styles */
-.footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #777;
+.rainbow-text {
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
