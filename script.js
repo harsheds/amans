@@ -11,12 +11,18 @@ function generatePassword() {
     return password;
 }
 
-function copyToClipboard() {
-    var passwordOutput = document.getElementById('passwordOutput');
+// external.js
+
+// Get the copy button and password output element
+const copyBtn = document.getElementById("copyBtn");
+const passwordOutput = document.getElementById("passwordOutput");
+
+// Add click event listener to the copy button
+copyBtn.addEventListener("click", function() {
     passwordOutput.select();
-    document.execCommand('copy');
-    alert('Password copied to clipboard!');
-}
+    document.execCommand("copy");
+});
+
 
 document.getElementById('generateBtn').addEventListener('click', function () {
     var passwordOutput = document.getElementById('passwordOutput');
